@@ -1,7 +1,7 @@
 [![Build Status](https://img.shields.io/travis/infinitaslearning/marv-mssql-driver/master.svg)](https://travis-ci.org/infinitaslearning/marv-mssql-driver)
 [![Code Style](https://img.shields.io/badge/code%20style-imperative-brightgreen.svg)](https://github.com/guidesmiths/eslint-config-imperative)
 
-# marv-sql-svr-driver
+# marv-mssql-driver
 A SQL Server driver for [marv](https://www.npmjs.com/package/marv)
 
 "If @cressie176 can do it, anyone can." Anon, 2019
