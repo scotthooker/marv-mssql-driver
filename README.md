@@ -17,14 +17,17 @@ migrations/
 const marv = require('marv')
 const mssqlDriver = require('marv-mssql-driver')
 const directory = path.join(process.cwd(), 'migrations' )
-const driver = pgDriver({
+const driver = mssqlDriver({
     table: 'db_migrations',     // defaults to 'migrations'
-    connection: {               // the connection sub document is passed directly to pg.Client
+    connection: {               // the connection sub document is passed directly to mssql
         host: 'localhost',
         port: 1433,
         database: 'dbo',
         user: 'sa',
-        password: 'Marv@234!'
+        password: 'Marv@234!',
+        options: {
+            encrypt: true // Use this if you're on Windows Azure
+        }
     }
 })
 marv.scan(directory, (err, migrations) => {
