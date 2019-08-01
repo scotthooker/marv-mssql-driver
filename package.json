@@ -1,0 +1,49 @@
+{
+  "name": "marv-mssql-driver",
+  "version": "0.0.1",
+  "description": "A SQL Server marv driver implementation",
+  "main": "index.js",
+  "scripts": {
+    "docker": "bash -c '(docker network inspect local 2>&1 > /dev/null || docker network create local) && docker run -e \"ACCEPT_EULA=Y\" -e \"SA_PASSWORD=Marv@234!\" -p 1433:1433 -d mcr.microsoft.com/mssql/server:2017-CU8-ubuntu'",
+    "test": "node test/suite.js",
+    "lint": "eslint .",
+    "prepush": "npm run lint && npm test"
+  },
+  "author": "Infinitas Learning BV",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^4.10.0",
+    "eslint-config-imperative": "^2.0.1",
+    "eslint-plugin-imperative": "^2.0.0",
+    "hath": "^1.0.1",
+    "hath-assert": "^0.2.0",
+    "hath-report-spec": "^0.1.0",
+    "husky": "^0.14.3",
+    "marv-compliance-tests": "^2.0.0"
+  },
+  "dependencies": {
+    "async": "^2.6.1",
+    "debug": "^4.1.0",
+    "lodash": "^4.17.11",
+    "marv": "^2.1.0",
+    "mssql": "^5.1.0"
+  },
+  "keywords": [
+    "marv",
+    "database",
+    "migration",
+    "migrate",
+    "sql serrver"
+  ],
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/infinitaslearning/marv-mssql-driver.git"
+  },
+  "bugs": {
+    "url": "https://github.com/infinitaslearning/marv-mssql-driver/issues"
+  },
+  "homepage": "https://github.com/infinitaslearning/marv-mssql-driver#readme"
+}
