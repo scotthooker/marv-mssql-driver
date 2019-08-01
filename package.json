@@ -1,5 +1,5 @@
 {
-  "name": "marv-mssql-driver",
+  "name": "@infinitaslearning/marv-mssql-driver",
   "version": "0.0.1",
   "description": "A SQL Server marv driver implementation",
   "main": "index.js",
